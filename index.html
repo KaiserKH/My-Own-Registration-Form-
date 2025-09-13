@@ -232,7 +232,6 @@
     }
   </style>
 </head>
-
 <body>
   <div>
     <h1>Register Your Self</h1>
@@ -272,8 +271,47 @@
       <button type="Submit">Submit</button>
     </div>
   </form>
-  
-  <script src="script.js"></script>
+  <script>
+        function togglePassword(el) {
+      const pass = document.getElementById("pass");
+      const confirm = document.getElementById("confirm");
+
+      if (pass.type === "password" || confirm.type === "password") {
+        pass.type = "text";
+        confirm.type = "text";
+        el.textContent = "🙈 Hide Password";
+      } else {
+        pass.type = "password";
+        confirm.type = "password";
+        el.textContent = "👁️ Show Password";
+      }
+    }
+
+    function checkPassword() {
+      const pass = document.getElementById("pass").value;
+      const confirm = document.getElementById("confirm").value;
+      const msg = document.getElementById("message");
+
+      if (confirm === "") {
+        msg.textContent = "";
+        return;
+      }
+
+      if (pass === confirm) {
+        msg.style.color = "green";
+        msg.textContent = "✅ Passwords match!";
+      } else {
+        msg.style.color = "red";
+        msg.textContent = "❌ Passwords do not match!";
+      }
+    }
+    
+    setTimeout(() => {
+  pass.type = "password";
+  confirm.type = "password";
+  el.textContent = "👁️ Show Password";
+}, 3000);
+  </script>
 </body>
 
 </html>
