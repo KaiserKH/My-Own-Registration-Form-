@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Form | designed by-Kamran </title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #f2f2f2;
+      border-color: #FFD100;
+      background: url(/IMG_3271.JPG);
+      background-size: 200%;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+      text-align: center;
+      background: #33AFFF;
+      position: relative;
+      margin-right: 0px;
+    }
+    
+    .p {
+      font-size: 14rem;
+      color: #000;
+      background: #8F8F8F;
+      text-align: center;
+      border-radius: 6px;
+      position: static;
+    }
+    
+    .form {
+      max-width: 420px;
+      width: 90%;
+      margin: 30px auto;
+      padding: 20px;
+      border: 2px solid #000;
+      border-radius: 10px;
+      box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.5s ease-in-out;
+      background-position: left;
+    }
+    
+    label {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    
+    input {
+      font-size: 1rem;
+      padding: 10px;
+      margin-bottom: 14px;
+      width: 100%;
+      border: 2px solid #000000;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.4);
+      
+      box-sizing: border-box;
+      outline: none;
+      transition: 0.3s;
+    }
+    
+    input.number {
+      width: 30%;
+      min-width: 70px;
+      height: 35px;
+      text-align: center;
+      font-size: 1rem;
+      margin: 5px;
+      display: inline-block;
+    }
+    
+    input:hover {
+      border-color: #33AFFF;
+    }
+    
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 6px;
+    }
+    
+    button {
+      font-size: 1rem;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #33AFFF;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      width: 100%;
+    }
+    
+    button:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+    
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      
+      p {
+        font-size: 0.9rem;
+      }
+      
+      .form {
+        width: 95%;
+        padding: 15px;
+      }
+      
+      input,
+      button {
+        font-size: 0.95rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+      
+      p {
+        font-size: 0.85rem;
+      }
+      
+      input.number {
+        width: 45%;
+      }
+      
+      button {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+    }
+    
+    .watermark {
+      background: #5300FF;
+      text-align: center;
+      margin: 0px;
+      padding: 0px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      font-family: sans-serif;
+      opacity: 50%;
+    }
+    
+    input:hover {
+      color: #FE0000;
+      font-size: 35px;
+      width: 70%;
+    }
+    
+    input[type="checkbox"]:checked:hover {
+      outline: 5px solid #0250B7;
+      background-color: #FF3333;
+      width: 20px;
+    }
+    
+    #message {
+      font-size: 14px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+    
+    .toggle-eye {
+      cursor: pointer;
+      font-size: 20px;
+      display: inline-block;
+      margin-top: 10px;
+      color: blue;
+      transition: 0.3s;
+      border-radius: 15px;
+      text-align: center;
+      animation: bounce 1s linear infinite;
+      color: #FF0000;
+      margin: 10px;
+    }
+    
+    .toggle-eye:hover {
+      animation: bounce 0.1s linear infinite;
+    }
+    
+    @keyframes bounce {
+      0% {
+        transform: translateX(0);
+        color: blue;
+      }
+      
+      25% {
+        transform: translateX(10px);
+        color: green;
+      }
+      
+      50% {
+        transform: translateX(-10px);
+        color: orange;
+      }
+      
+      75% {
+        transform: translateX(10px);
+        color: purple;
+      }
+      
+      100% {
+        transform: translateX(0);
+        color: red;
+      }
+    }
+    
+    ::placeholder {
+      color: #000;
+    }
+    
+    :hover::placeholder {
+      font-size: 20px;
+      color: red;
+      text-align: left;
+      margin: 2px;
+      align-items: center;
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>Register Your Self</h1>
+  </div>
+  <div>
+    <p class="watermark">designed by Kamran</p>
+  </div>
+  <form class="form" method="POST">
+    <div>
+      <label for="fullname">Full Name</label>
+      <input type="text" name="fullname" id="fullname" placeholder="Enter Your Name" required minlength="3">
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required placeholder="Enter Your E-mail">
+    </div>
+    <div>
+      <label for="phone">Phone</label>
+      <input class="number" type="tel" name="phone" id="phone" minlngth="5" maxlength="5" required placeholder="5 Digits">
+      
+      <input class="number" type="tel" name="phone" id="phone" minlngth="5" maxlength="5" placeholder="5 Digits" required>
+    </div>
+    <div>
+      <label for="pass">Password</label>
+      <input type="password" name="pass" id="pass" required placeholder="Enter Password">
+    </div>
+    <div>
+      <label for="confirm">Confirm Password</label>
+      <input type="password" name="pass" id="confirm" required placeholder="Confirm Password">
+    </div>
+    <div class="toggle-eye" onclick="togglePassword('Password', this)">👀 Show Password</div>
+    <div>
+      <input type="checkbox" name="check" id="check" required>
+      <label for="check">my all given information is correct. And i give permission to use my <a href="">information</a> as your choice.</label>
+    </div>
+    <div>
+      <button type="Submit">Submit</button>
+    </div>
+  </form>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
